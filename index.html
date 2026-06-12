@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuizRank</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- REGISTER -->
+    <div id="registerPage" class="card">
+        <h2>Register</h2>
+        <input type="text" id="regUsername" placeholder="Username">
+        <input type="password" id="regPassword" placeholder="Password">
+        <button onclick="register()">Register</button>
+        <p>
+            Already have an account?
+            <a href="#" onclick="showLogin()">Login</a>
+        </p>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="loginPage" class="card hidden">
+        <h2>Login</h2>
+        <input type="text" id="loginUsername" placeholder="Username">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p>
+            New User?
+            <a href="#" onclick="showRegister()">Register</a>
+        </p>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboardPage" class="card hidden">
+        <h2>Quiz Dashboard</h2>
+        <h3 id="welcome"></h3>
+
+        <button onclick="startQuiz()">Start Quiz</button>
+        <button onclick="showLeaderboard()">Leaderboard</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="quizPage" class="card hidden">
+
+        <h2>Quiz Game</h2>
+
+        <div class="timer">
+            Time Left:
+            <span id="time">60</span>s
+        </div>
+
+        <div id="quizContainer"></div>
+
+        <button onclick="submitQuiz()">Submit Quiz</button>
+
+    </div>
+
+    <!-- RESULT -->
+    <div id="resultPage" class="card hidden">
+
+        <h2>Quiz Finished</h2>
+
+        <h3 id="scoreText"></h3>
+
+        <button onclick="showLeaderboard()">
+            View Leaderboard
+        </button>
+
+    </div>
+
+    <!-- LEADERBOARD -->
+    <div id="leaderboardPage" class="card hidden">
+
+        <h2>Leaderboard</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+
+            <tbody id="leaderboardBody"></tbody>
+        </table>
+
+        <button onclick="goDashboard()">
+            Back
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
