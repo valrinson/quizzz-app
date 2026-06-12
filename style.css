@@ -20,13 +20,20 @@ body{
 }
 
 .card{
-    background:rgba(255,255,255,0.95);
+    width:100%;
+    max-width:700px;
+    margin:auto;
+
+    background:rgba(255,255,255,.95);
     backdrop-filter:blur(15px);
+
     border-radius:30px;
     padding:40px;
+
     box-shadow:
-    0 15px 40px rgba(0,0,0,.15),
-    0 5px 15px rgba(0,0,0,.08);
+        0 15px 40px rgba(0,0,0,.15),
+        0 5px 15px rgba(0,0,0,.08);
+
     animation:fadeIn .4s ease;
 }
 
@@ -227,4 +234,124 @@ h2{
     font-size:26px;
 }
 
+}
+@media (max-width: 768px){
+
+    body{
+        padding:15px;
+    }
+
+    .container{
+        max-width:100%;
+    }
+
+    .card{
+        padding:20px;
+        border-radius:20px;
+    }
+
+    h2{
+        font-size:1.6rem;
+    }
+
+    h3{
+        font-size:1rem;
+    }
+
+    button{
+        padding:14px;
+        font-size:15px;
+    }
+
+    input{
+        padding:14px;
+        font-size:15px;
+    }
+
+    .timer{
+        font-size:24px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    th,td{
+        padding:8px;
+    }
+}
+
+@media (max-width:480px){
+
+    h2{
+        font-size:1.4rem;
+    }
+
+    .card{
+        padding:15px;
+    }
+
+    button{
+        font-size:14px;
+    }
+
+    .question h4{
+        font-size:15px;
+    }
+}
+.hero{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.hero-icon{
+    font-size:80px;
+    margin-bottom:15px;
+    animation:float 3s ease-in-out infinite;
+}
+
+.subtitle{
+    color:#666;
+    margin-top:10px;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+.table-container{
+    width:100%;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th{
+    background:#00b4db;
+    color:white;
+}
+
+table th,
+table td{
+    padding:12px;
+    border:1px solid rgba(0,0,0,.1);
+    text-align:center;
+}
+.hero{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.hero img{
+    width:180px;
+    max-width:100%;
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,.2));
 }
